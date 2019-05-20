@@ -18,9 +18,10 @@ include_once $this->targetDirs[3].'\\vendor\\doctrine\\data-fixtures\\lib\\Doctr
 include_once $this->targetDirs[3].'\\vendor\\doctrine\\doctrine-fixtures-bundle\\ORMFixtureInterface.php';
 include_once $this->targetDirs[3].'\\vendor\\doctrine\\doctrine-fixtures-bundle\\Fixture.php';
 include_once $this->targetDirs[3].'\\src\\DataFixtures\\AppFixtures.php';
+include_once $this->targetDirs[3].'\\src\\DataFixtures\\ArticleFixtures.php';
 
 $a = new \Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader($this);
-$a->addFixtures([0 => ['fixture' => new \App\DataFixtures\AppFixtures(), 'groups' => []]]);
+$a->addFixtures([0 => ['fixture' => new \App\DataFixtures\AppFixtures(), 'groups' => []], 1 => ['fixture' => new \App\DataFixtures\ArticleFixtures(), 'groups' => []]]);
 
 $this->privates['doctrine.fixtures_load_command'] = $instance = new \Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand($a);
 

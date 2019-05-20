@@ -5,37 +5,17 @@
 {% block body %}
 
 <section class="articles">
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class="metadata">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class="content">
-      <img src="http://placehold.it/350x150" alt="" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
-      <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
-      <a href="{{path('blog_show')}}" class="btn btn-primary">Lire la suite</a>
-    </div>
-  </article>
-
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class="metadata">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class="content">
-      <img src="http://placehold.it/350x150" alt="" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus, unde pariatur, odit provident deleniti?</p>
-      <p>Laborum, eveniet molestias consectetur, quod, magni, iusto explicabo in commodi libero numquam eligendi architecto atque!</p>
-      <a href="" class="btn btn-primary">Lire la suite</a>
-    </div>
-  </article>
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class="metadata">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class="content">
-      <img src="http://placehold.it/350x150" alt="" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque tenetur a impedit, placeat officia?</p>
-      <p>Vel cumque nemo molestias, minus laborum ipsam rerum, dolores ut consequuntur numquam deserunt odit repellat.</p>
-      <a href="" class="btn btn-primary">Lire la suite</a>
-    </div>
-  </article>
+  {% for article in articles %}
+    <article>
+      <h2>{{article.title}}</h2>
+      <div class="metadata">Ecrit le {{article.createdAt|date('d/m/Y')}} à {{article.createdAt|date('h:i')}} dans la catégorie Politique</div>
+      <div class="content">
+        <img src="{{article.image}}" alt="" />
+        {{article.content|raw}}
+        <a href="{{path('blog_show',{'id':article.id})}}" class="btn btn-primary">Lire la suite</a>
+      </div>
+    </article>
+  {% endfor %}
 </section>
 
 {% endblock %}

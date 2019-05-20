@@ -64,12 +64,25 @@ class __TwigTemplate_7f38ef02c6001ba802c4d4b2145dec4444103d39cc08edffe96c52d07e8
         // line 4
         echo "
 <article>
-  <h2>Titre de l'article</h2>
-  <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+  <h2>";
+        // line 6
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 6, $this->source); })()), "title", [], "any", false, false, false, 6), "html", null, true);
+        echo "</h2>
+  <div class=\"metadata\">Ecrit le ";
+        // line 7
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 7, $this->source); })()), "createdAt", [], "any", false, false, false, 7), "d/m/Y"), "html", null, true);
+        echo " à ";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 7, $this->source); })()), "createdAt", [], "any", false, false, false, 7), "h\\hi"), "html", null, true);
+        echo " dans la catégorie Politique</div>
   <div class=\"content\">
-    <img src=\"http://placehold.it/350x150\" alt=\"\" />
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum amet porro a repudiandae quibusdam aspernatur nulla nisi quam magni! Perspiciatis maiores eius autem quam minima inventore, corrupti libero, esse voluptatem, delectus, quo fugit. Voluptatem reiciendis hic nam, expedita modi doloremque libero, quidem! Accusantium animi molestiae dolores magnam nam tenetur dolorum.</p>
+    <img src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 9, $this->source); })()), "image", [], "any", false, false, false, 9), "html", null, true);
+        echo "\" alt=\"\" />
+    ";
+        // line 10
+        echo twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 10, $this->source); })()), "content", [], "any", false, false, false, 10);
+        echo "
   </div>
 </article>
 
@@ -94,7 +107,7 @@ class __TwigTemplate_7f38ef02c6001ba802c4d4b2145dec4444103d39cc08edffe96c52d07e8
 
     public function getDebugInfo()
     {
-        return array (  65 => 4,  56 => 3,  34 => 1,);
+        return array (  84 => 10,  80 => 9,  73 => 7,  69 => 6,  65 => 4,  56 => 3,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -104,12 +117,11 @@ class __TwigTemplate_7f38ef02c6001ba802c4d4b2145dec4444103d39cc08edffe96c52d07e8
 {% block body %}
 
 <article>
-  <h2>Titre de l'article</h2>
-  <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+  <h2>{{article.title}}</h2>
+  <div class=\"metadata\">Ecrit le {{article.createdAt|date('d/m/Y')}} à {{article.createdAt|date('h\\\\hi')}} dans la catégorie Politique</div>
   <div class=\"content\">
-    <img src=\"http://placehold.it/350x150\" alt=\"\" />
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum amet porro a repudiandae quibusdam aspernatur nulla nisi quam magni! Perspiciatis maiores eius autem quam minima inventore, corrupti libero, esse voluptatem, delectus, quo fugit. Voluptatem reiciendis hic nam, expedita modi doloremque libero, quidem! Accusantium animi molestiae dolores magnam nam tenetur dolorum.</p>
+    <img src=\"{{article.image}}\" alt=\"\" />
+    {{article.content|raw}}
   </div>
 </article>
 

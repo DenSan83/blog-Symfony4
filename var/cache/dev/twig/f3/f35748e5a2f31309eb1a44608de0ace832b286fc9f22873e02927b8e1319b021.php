@@ -83,41 +83,45 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
         // line 6
         echo "
 <section class=\"articles\">
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class=\"content\">
-      <img src=\"http://placehold.it/350x150\" alt=\"\" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
-      <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
-      <a href=\"";
-        // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show");
-        echo "\" class=\"btn btn-primary\">Lire la suite</a>
-    </div>
-  </article>
-
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class=\"content\">
-      <img src=\"http://placehold.it/350x150\" alt=\"\" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus, unde pariatur, odit provident deleniti?</p>
-      <p>Laborum, eveniet molestias consectetur, quod, magni, iusto explicabo in commodi libero numquam eligendi architecto atque!</p>
-      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
-    </div>
-  </article>
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class=\"content\">
-      <img src=\"http://placehold.it/350x150\" alt=\"\" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque tenetur a impedit, placeat officia?</p>
-      <p>Vel cumque nemo molestias, minus laborum ipsam rerum, dolores ut consequuntur numquam deserunt odit repellat.</p>
-      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
-    </div>
-  </article>
-</section>
+  ";
+        // line 8
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 8, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
+            // line 9
+            echo "    <article>
+      <h2>";
+            // line 10
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 10), "html", null, true);
+            echo "</h2>
+      <div class=\"metadata\">Ecrit le ";
+            // line 11
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "createdAt", [], "any", false, false, false, 11), "d/m/Y"), "html", null, true);
+            echo " à ";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "createdAt", [], "any", false, false, false, 11), "h:i"), "html", null, true);
+            echo " dans la catégorie Politique</div>
+      <div class=\"content\">
+        <img src=\"";
+            // line 13
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "image", [], "any", false, false, false, 13), "html", null, true);
+            echo "\" alt=\"\" />
+        ";
+            // line 14
+            echo twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 14);
+            echo "
+        <a href=\"";
+            // line 15
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 15)]), "html", null, true);
+            echo "\" class=\"btn btn-primary\">Lire la suite</a>
+      </div>
+    </article>
+  ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 19
+        echo "</section>
 
 ";
         
@@ -140,7 +144,7 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
 
     public function getDebugInfo()
     {
-        return array (  95 => 15,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  124 => 19,  114 => 15,  110 => 14,  106 => 13,  99 => 11,  95 => 10,  92 => 9,  88 => 8,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -152,37 +156,17 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
 {% block body %}
 
 <section class=\"articles\">
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class=\"content\">
-      <img src=\"http://placehold.it/350x150\" alt=\"\" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
-      <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
-      <a href=\"{{path('blog_show')}}\" class=\"btn btn-primary\">Lire la suite</a>
-    </div>
-  </article>
-
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class=\"content\">
-      <img src=\"http://placehold.it/350x150\" alt=\"\" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus, unde pariatur, odit provident deleniti?</p>
-      <p>Laborum, eveniet molestias consectetur, quod, magni, iusto explicabo in commodi libero numquam eligendi architecto atque!</p>
-      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
-    </div>
-  </article>
-  <article>
-    <h2>Titre de l'article</h2>
-    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
-    <div class=\"content\">
-      <img src=\"http://placehold.it/350x150\" alt=\"\" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque tenetur a impedit, placeat officia?</p>
-      <p>Vel cumque nemo molestias, minus laborum ipsam rerum, dolores ut consequuntur numquam deserunt odit repellat.</p>
-      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
-    </div>
-  </article>
+  {% for article in articles %}
+    <article>
+      <h2>{{article.title}}</h2>
+      <div class=\"metadata\">Ecrit le {{article.createdAt|date('d/m/Y')}} à {{article.createdAt|date('h:i')}} dans la catégorie Politique</div>
+      <div class=\"content\">
+        <img src=\"{{article.image}}\" alt=\"\" />
+        {{article.content|raw}}
+        <a href=\"{{path('blog_show',{'id':article.id})}}\" class=\"btn btn-primary\">Lire la suite</a>
+      </div>
+    </article>
+  {% endfor %}
 </section>
 
 {% endblock %}
