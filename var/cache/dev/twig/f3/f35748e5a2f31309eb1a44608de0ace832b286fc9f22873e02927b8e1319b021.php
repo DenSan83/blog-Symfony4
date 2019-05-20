@@ -90,7 +90,10 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
       <img src=\"http://placehold.it/350x150\" alt=\"\" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
       <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
-      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+      <a href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show");
+        echo "\" class=\"btn btn-primary\">Lire la suite</a>
     </div>
   </article>
 
@@ -137,7 +140,7 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
 
     public function getDebugInfo()
     {
-        return array (  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  95 => 15,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -156,7 +159,7 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
       <img src=\"http://placehold.it/350x150\" alt=\"\" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
       <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
-      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+      <a href=\"{{path('blog_show')}}\" class=\"btn btn-primary\">Lire la suite</a>
     </div>
   </article>
 
