@@ -74,14 +74,17 @@ class __TwigTemplate_869eba63aa8f1f5a8a6f03aff0da98c3aa2d72d4fb12847843189c015ed
           </ul>
         </div>
       </nav>
-
+      <div class=\"container\">
         ";
         // line 28
         $this->displayBlock('body', $context, $blocks);
         // line 29
-        echo "        ";
+        echo "      </div>
+
+        ";
+        // line 31
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 30
+        // line 32
         echo "    </body>
 </html>
 ";
@@ -145,7 +148,7 @@ class __TwigTemplate_869eba63aa8f1f5a8a6f03aff0da98c3aa2d72d4fb12847843189c015ed
 
     }
 
-    // line 29
+    // line 31
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -169,7 +172,7 @@ class __TwigTemplate_869eba63aa8f1f5a8a6f03aff0da98c3aa2d72d4fb12847843189c015ed
 
     public function getDebugInfo()
     {
-        return array (  149 => 29,  132 => 28,  115 => 7,  97 => 5,  85 => 30,  82 => 29,  80 => 28,  58 => 8,  56 => 7,  51 => 5,  45 => 1,);
+        return array (  152 => 31,  135 => 28,  118 => 7,  100 => 5,  88 => 32,  86 => 31,  82 => 29,  80 => 28,  58 => 8,  56 => 7,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -200,8 +203,10 @@ class __TwigTemplate_869eba63aa8f1f5a8a6f03aff0da98c3aa2d72d4fb12847843189c015ed
           </ul>
         </div>
       </nav>
-
+      <div class=\"container\">
         {% block body %}{% endblock %}
+      </div>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

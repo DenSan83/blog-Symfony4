@@ -81,29 +81,41 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        echo "
+<section class=\"articles\">
+  <article>
+    <h2>Titre de l'article</h2>
+    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+    <div class=\"content\">
+      <img src=\"http://placehold.it/350x150\" alt=\"\" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
+      <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
+      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+    </div>
+  </article>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+  <article>
+    <h2>Titre de l'article</h2>
+    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+    <div class=\"content\">
+      <img src=\"http://placehold.it/350x150\" alt=\"\" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus, unde pariatur, odit provident deleniti?</p>
+      <p>Laborum, eveniet molestias consectetur, quod, magni, iusto explicabo in commodi libero numquam eligendi architecto atque!</p>
+      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+    </div>
+  </article>
+  <article>
+    <h2>Titre de l'article</h2>
+    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+    <div class=\"content\">
+      <img src=\"http://placehold.it/350x150\" alt=\"\" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque tenetur a impedit, placeat officia?</p>
+      <p>Vel cumque nemo molestias, minus laborum ipsam rerum, dolores ut consequuntur numquam deserunt odit repellat.</p>
+      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+    </div>
+  </article>
+</section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("D:/Projets pro/museos caroline/www/src/Controller/BlogController.php", 0), "html", null, true);
-        echo "\">src/Controller/BlogController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("D:/Projets pro/museos caroline/www/templates/blog/index.html.twig", 0), "html", null, true);
-        echo "\">templates/blog/index.html.twig</a></code></li>
-    </ul>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -125,7 +137,7 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
 
     public function getDebugInfo()
     {
-        return array (  103 => 17,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -135,20 +147,41 @@ class __TwigTemplate_1ca2c93104d4e71f4aa87ef662f5273b0d9a5856c99b2bd43efb6a7f496
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<section class=\"articles\">
+  <article>
+    <h2>Titre de l'article</h2>
+    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+    <div class=\"content\">
+      <img src=\"http://placehold.it/350x150\" alt=\"\" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto tempora nobis dolore totam praesentium.</p>
+      <p>Esse molestias aut voluptates ad architecto ullam est quidem alias facere, maxime, tenetur. Quae, quasi!</p>
+      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+    </div>
+  </article>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ 'D:/Projets pro/museos caroline/www/src/Controller/BlogController.php'|file_link(0) }}\">src/Controller/BlogController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'D:/Projets pro/museos caroline/www/templates/blog/index.html.twig'|file_link(0) }}\">templates/blog/index.html.twig</a></code></li>
-    </ul>
-</div>
+  <article>
+    <h2>Titre de l'article</h2>
+    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+    <div class=\"content\">
+      <img src=\"http://placehold.it/350x150\" alt=\"\" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus, unde pariatur, odit provident deleniti?</p>
+      <p>Laborum, eveniet molestias consectetur, quod, magni, iusto explicabo in commodi libero numquam eligendi architecto atque!</p>
+      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+    </div>
+  </article>
+  <article>
+    <h2>Titre de l'article</h2>
+    <div class=\"metadata\">Ecrit le *date* à *heure* dans la catégorie Politique</div>
+    <div class=\"content\">
+      <img src=\"http://placehold.it/350x150\" alt=\"\" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque tenetur a impedit, placeat officia?</p>
+      <p>Vel cumque nemo molestias, minus laborum ipsam rerum, dolores ut consequuntur numquam deserunt odit repellat.</p>
+      <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>
+    </div>
+  </article>
+</section>
+
 {% endblock %}
 ", "blog/index.html.twig", "D:\\Projets pro\\museos caroline\\www\\templates\\blog\\index.html.twig");
     }

@@ -34,6 +34,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         'blog' => [[], ['_controller' => 'App\\Controller\\BlogController::index'], [], [['text', '/blog']], [], []],
         'home' => [[], ['_controller' => 'App\\Controller\\BlogController::home'], [], [['text', '/']], [], []],
+        'blog_show' => [[], ['_controller' => 'App\\Controller\\BlogController::show'], [], [['text', '/blog/12']], [], []],
     ];
         }
     }
